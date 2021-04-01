@@ -49,7 +49,7 @@ func (ctl *MetricController) Create(c echo.Context) error {
 
 	ctl.usecase.Create(metric)
 
-	return c.JSON(http.StatusOK, nil)
+	return c.JSON(http.StatusOK, map[string]interface{}{})
 }
 
 type createBodyRequest struct {
